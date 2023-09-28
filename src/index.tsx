@@ -1,15 +1,22 @@
 import { BrowserRouter } from 'react-router-dom'
-import ReactDOM from 'react-dom/client'
+import {StrictMode} from 'react'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
-root.render(
+
+var ReactDOM = require('react-dom/client')
+const container = document.getElementById('root')
+const root = ReactDOM.createRoot(container as HTMLElement)
+const app = (
+  <StrictMode>
   <BrowserRouter>
       <App />
   </BrowserRouter>
+  </StrictMode>
 )
+
+root.render(app)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

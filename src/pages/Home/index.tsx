@@ -50,28 +50,34 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.searchArea}>
+      <div className={styles.searchArea} >
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           type='text'
           className={styles.searchInput}
         />
+
         <button
           onClick={() => isNewSearch(true)}
           className={styles.searchButton}
         >
-          Pesquisar
+        Pesquisar
         </button>
 
-        <button onClick={() => setSort('relevant')}> Relevância
+        <button className={styles.buttonRelevant} onClick={() => setSort('relevant')}> Buscar
+        <i className='small material-icons'>arrow_drop_down</i> Relevante
           </button>
-          <button onClick={() => setSort('latest')}> Mais Recentes
+          <button className={styles.buttonLatest} onClick={() => setSort('latest')}> 
+          <i className='small material-icons'>arrow_drop_up</i>Mais Recentes
           </button>
 
-          <button onClick={() => setOrientation('all')}>Todas</button>
-          <button onClick={() => setOrientation('portrait')}>Retrato</button>
-          <button onClick={() => setOrientation('landscape')}>Paisagem</button>
+          <button className={styles.buttonOrientation} onClick={() => setOrientation('all')}>Ver: Tudo
+          </button>
+          <button className={styles.buttonOrientation} onClick={() => setOrientation('portrait')}>
+          <i className='small material-icons'>stay_current_portrait</i>Retrato</button>
+          <button className={styles.buttonOrientation} onClick={() => setOrientation('landscape')}>
+          <i className='small material-icons'>stay_current_landscape</i> Paisagem</button>
 
 
         <button

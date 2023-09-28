@@ -76,6 +76,14 @@
   margin: 0 20px;
 }
 
+.buttonRelevant, .buttonLatest, .buttonOrientation{
+  font-family: 'regular';
+  font-size: 28px;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
 @media screen and (max-width: 600px) {
   .searchInput {
     width: 70%;
